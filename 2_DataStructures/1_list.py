@@ -10,3 +10,9 @@ print(len(zeros))
 combined = l + matrix
 
 print(combined)
+
+numbers =  list(range(20))#Any interable can be passes in the list
+
+name = list('Vidit')
+print(numbers)
+print(name)
