@@ -23,7 +23,7 @@ print(prices_array)
 # using maps to clarify stuff
 prices = map(lambda price: price[1], product_array)
 print(prices)
-prices = list(map(lambda price: price[1], product_array))
+prices = list(map(lambda price: price[1] >= 8, product_array))
 print(prices)
 
 # Now using Filtetr Functions
