@@ -3,6 +3,10 @@ class Point:
         self.x = x
         self.y = y
 
+    @classmethod
+    def createRandom(cls):
+        return cls(1, 2)
+
     def __str__(self):
         return '{} and {}'.format(self.x, self.y)
 
@@ -12,12 +16,14 @@ class Point:
     def __gt__(self, other):
         return self.x > other.x and self.y > other.y
 
-    @classmethod
-    def zeros(cls):
-        return cls(0, 0)
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
 
 
-point1 = Point(1, 2)
-point2 = Point(10, 20)
-print(point1 == point2)
-print(point2 > point1)
+point = Point.createRandom()
+point2 = Point(11, 12)
+point3 = Point.createRandom()
+print(point)
+print(point == point3)
+print(point2 > point)
+print(point + point3)

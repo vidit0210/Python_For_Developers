@@ -19,5 +19,5 @@ cloud = TagCloud()
 cloud.add('python')
 cloud.add('Python')
 cloud.add('Python')
-cloud
-print(cloud.tags)
+cloud.add('javaScript')
+print(len(cloud))  # Gives number of keys
